@@ -171,7 +171,11 @@ def player_numbers(team)
   teamNumbers = []
   data.each do |location|
     if location[1][:team_name] == team
-      teamNumbers << location[1][:players][0][:number]
+      i = 0
+      while i < 5
+        teamNumbers << location[1][:players][0][:number]
+        i += 1
+      end
     end
   end
   teamNumbers
