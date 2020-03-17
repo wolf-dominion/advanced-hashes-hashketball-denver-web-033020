@@ -185,11 +185,12 @@ def player_stats(name)
   
   data = game_hash
   playerStats = {}
+  
   data.each do |location|
     i = 0
     while i < location[1][:players].length
       if location[1][:players][i][:player_name] == name
-        return location[1][:players][i]
+        playerStats = location[1][:players][i]
       end
       i += 1
     end
