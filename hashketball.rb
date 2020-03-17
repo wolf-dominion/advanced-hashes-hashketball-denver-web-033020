@@ -205,6 +205,10 @@ def big_shoe_rebounds()
   numRebounds = 0
   
   data.each do |location|
+    location[1].each do |n|
+      puts n
+    end
+  end
   
   
 end
