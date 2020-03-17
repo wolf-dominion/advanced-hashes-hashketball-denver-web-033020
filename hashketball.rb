@@ -201,6 +201,6 @@ end
 
 def big_shoe_rebounds()
   
-  
+  shoesize = 0
   
 end
