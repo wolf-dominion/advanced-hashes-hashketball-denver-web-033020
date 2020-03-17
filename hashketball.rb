@@ -207,7 +207,6 @@ def big_shoe_rebounds()
   data.each do |location|
     location[1][:players].each do |n|
         pp n[:shoe]
-      end
     end
   end
 end
