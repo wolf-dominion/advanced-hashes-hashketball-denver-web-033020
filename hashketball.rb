@@ -202,7 +202,9 @@ end
 def big_shoe_rebounds()
   data = game_hash
   shoesize = 0
+  numRebounds = 0
   
+  data.each do |location|
   
   
 end
