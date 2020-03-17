@@ -181,6 +181,9 @@ def player_numbers(team)
   teamNumbers
 end
 
-def player_stats()
+def player_stats(name)
+  
+  data = game_hash
+  
   
 end
