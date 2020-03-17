@@ -196,4 +196,5 @@ def player_stats(name)
     end
   end
   playerStats.delete(:player_name)
+  playerStats
 end
