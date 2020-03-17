@@ -205,12 +205,9 @@ def big_shoe_rebounds()
   numRebounds = 0
   
   data.each do |location|
-    i = 0
-    while i < location[1][:players].length
-        pp n[i][:shoe]
-        pp n[:rebounds]
-        i += 1
-      end
+    
+    
+    
   end
   
   
