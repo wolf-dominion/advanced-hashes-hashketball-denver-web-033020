@@ -209,7 +209,7 @@ def big_shoe_rebounds()
     if shoesize < location[1][:players][0][:shoe]
       shoesize = location[1][:players][0][:shoe]
     end
-    
+    puts shoesize
   end
   
   
