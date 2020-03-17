@@ -205,10 +205,10 @@ def big_shoe_rebounds()
   numRebounds = 0
   
   data.each do |location|
-    
-    if shoesize < location[1][:players][0][:shoe]
-      shoesize = location[1][:players][0][:shoe]
-    end
+    location[1][:players].each do |n|
+      if shoesize < location[1][:players][0][:shoe]
+        shoesize = location[1][:players][0][:shoe]
+      end
     puts "Shoe size is #{shoesize}"
   end
   
