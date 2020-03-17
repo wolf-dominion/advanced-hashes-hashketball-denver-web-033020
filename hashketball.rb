@@ -184,7 +184,7 @@ end
 def player_stats(name)
   
   data = game_hash
-  
+  playerStats = {}
   data.each do |location|
     i = 0
     while i < location[1][:players].length
