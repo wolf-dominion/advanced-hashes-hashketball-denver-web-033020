@@ -209,7 +209,6 @@ def big_shoe_rebounds()
       if shoesize < n[:shoe]
         shoesize = n[:shoe]
         numRebounds = n[:rebounds]
-        puts "Shoe size is: #{shoesize}"
       end
     end
   end
