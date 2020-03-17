@@ -210,6 +210,7 @@ def big_shoe_rebounds()
       location[1][:players][i].each do |n|
         puts n[i][:shoe]
         puts n[:rebounds]
+        i += 1
       end
     end
   end
