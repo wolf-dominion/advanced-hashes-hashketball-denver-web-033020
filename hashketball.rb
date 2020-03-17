@@ -173,7 +173,7 @@ def player_numbers(team)
     if location[1][:team_name] == team
       i = 0
       while i < 5
-        teamNumbers << location[1][:players][0][:number]
+        teamNumbers << location[1][:players][i][:number]
         i += 1
       end
     end
