@@ -116,6 +116,20 @@ def game_hash
                                 }
 end
 
+def playersArray
+  home_players = game_hash[:home][:players]
+  away_players = game_hash[:away][:players]
+
+  home_players.concat away_players
+end
+
+def find_player (players_name)
+  playersArray.find do |player|
+    player[:player_name] == players_name
+  end
+end
+
+=begin
 def num_points_scored(name)
   game_hash.each do |location, teamInfo|
     teamInfo[:players].each do |playerInfo|
@@ -125,7 +139,15 @@ def num_points_scored(name)
     end
   end
 end
+=end
 
+def num_points_scored players_name
+  # equivalent is: find_player(players_name)[:points]
+  found_player = find_player players_name
+  found_player[:points]
+end
+
+=begin
 def shoe_size(name)
   game_hash.each do |location, teamInfo|
     teamInfo[:players].each do |playerInfo|
@@ -135,7 +157,14 @@ def shoe_size(name)
     end
   end
 end
+=end
 
+def shoe_size(name)
+  found_player = find_player name
+  found_player[:shoe]
+end
+
+=begin
 def team_colors(team)
   game_hash.each do |location, teamInfo|
     teamInfo.each do |teamInfo_key, teamInfo_value|
@@ -146,6 +175,18 @@ def team_colors(team)
       end
     end 
   end
+end
+=end
+
+def get_team_by_name team_name
+  game_hash.values.find do |team|
+    team[:team_name] == team_name
+  end
+end
+
+def team_colors(team_name)
+  matching_team = get_team_by_name team_name
+  matching_team[:colors]
 end
 
 def team_names()
